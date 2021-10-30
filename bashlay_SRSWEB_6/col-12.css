@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+.horo-list {
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .horo-list { width: 750px; }   
+}
+@media (min-width: 992px) {
+  .horo-list { width: 970px; }
+}
+@media (min-width: 1200px) {
+  .horo-list { width: 1170px; }
+}
+
+.col-xs-12, .col-sm-6, .col-md-4, .col-lg-3 {
+  position: relative;
+  float: left;
+}
+
+.col-xs-12 { width: 100%; }
+
+/* здесь начинается чистой воды импровизация с clearfix'ами */
+/* у каждого из разрешений экрана он свой и на конкретном месте */
+/* и через пустой элемент списка делает новую строку */
+/* но они конфликтуют друг с другом, и поэтому при работе одного приходится ломать другой */
+
+@media (min-width: 768px) {
+  .col-sm-6 { width: 50%; }
+  .clearfix-2:after {
+    content: " ";
+    display: table;
+    clear: both; }
+  .clearfix-3:after {
+    content: none; }
+}
+
+@media (min-width: 992px) {
+  .col-md-4 { width: 33.33333333%; }
+  .clearfix-3:after {
+    content: " ";
+    display: table;
+    clear: both; }
+  .clearfix-2:after {
+    content: none; }
+}
+
+@media (min-width: 1200px) {
+  .col-lg-3 { width: 25%; }
+  .clearfix-4:after {
+    content: " ";
+    display: table;
+    clear: both; }
+  .clearfix-3:after {
+    content: none; }
+}

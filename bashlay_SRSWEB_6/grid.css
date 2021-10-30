@@ -1,0 +1,25 @@
+.horo-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+	margin: 20px auto;
+}
+
+.clearfix-2, .clearfix-3, .clearfix-4 {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .horo-list { width: 750px;
+  grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 992px) {
+  .horo-list { width: 970px;
+  grid-template-columns: 1fr 1fr 1fr; }
+}
+
+@media (min-width: 1200px) {
+  .horo-list { width: 1170px;
+  grid-template-columns: 1fr 1fr 1fr 1fr; }
+}
