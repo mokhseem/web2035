@@ -1,0 +1,68 @@
+body {
+  background-color: #cecece;
+  padding: 32px;
+}
+
+button {
+  margin: 25px 15px;
+  border: none;
+  border-radius: 5px; /* скругленные углы */
+  border: 1px solid lime;
+  padding: 15px 35px;
+}
+
+button:hover {
+  outline: 1px solid white;
+  outline-offset: -2px; /* положение рамки внутри границ */
+  cursor: pointer; /* изменение курсора */
+}
+
+/* простейший градиент из 2-х цветов, направление по умолчанию - сверху вниз */
+.button1 {
+  background-image: linear-gradient(#76B9CC, #97cc76);
+}
+
+/* простейший линейный градиент из 3-х цветов, направление по умолчанию - сверху вниз */
+.button2 {
+  background-image: linear-gradient(#76B9CC, #CC208A, #97cc76);
+}
+
+/* простейший линейный градиент из 4-х цветов, направление по умолчанию - сверху вниз */
+.button3 {
+  background-image: linear-gradient(#76B9CC, #CC208A, #97cc76, #B34EE9);
+}
+
+/* линейный градиент с колорстопами в относительном (процентном) выражении */
+.button4 {
+  background-image: linear-gradient(blue 5%, lime 30%, #97cc76 80%, #B34EE9 90%);
+}
+
+/* линейный градиент с колорстопами в абсолютном (пиксельном) выражении */
+.button5 {
+  background-image: linear-gradient(blue 5px, lime 15px, white 30px, black 50px);
+}
+
+/* линейный градиент под углом 25 градусов (по часовой стрелке) */
+.button6 {
+  background-image: linear-gradient(25deg, blue, lime);
+}
+
+/* радиальный градиент с колорстопами в относительном (процентном) выражении */
+.button7 {
+  background-image: radial-gradient(red 0%, yellow 30%);
+}
+
+/* радиальный градиент с центром в правом верхнем углу */
+.button8 {
+  background-image: radial-gradient(at top right, red, yellow);
+}
+
+/* радиальный градиент от начальной позиции до самого дальнего угла */
+.button9 {
+  background-image: radial-gradient(farthest-corner at 25% 50%, #f35 0%, #43e 100%);
+}
+
+/* радиальный градиент размером 15x15 пикселей при относительном позиционировании */
+.button10 {
+  background-image: radial-gradient(15px 15px at 85% 25%, #f35 0%, #43e 100%);
+}

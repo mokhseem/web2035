@@ -1,0 +1,90 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.wrap {
+  width: 200px;
+  height: 150px;
+  outline: 1px solid #000;
+  display: inline-block;
+  margin: 35px 50px;
+}
+
+.wrap > div {
+  width: 200px;
+  height: 150px;
+  background: rgba(144, 235, 242, .5);
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  transition: transform 1s;
+}
+
+.wrap > div > span {
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  text-align: center;
+}
+
+.translateX:hover {
+  /* перемещение по горизонтали */
+  transform: translateX(50px);
+}
+
+.translateY:hover {
+  /* перемещение по вертикали (используется обратная система координат) */
+  transform: translateY(50px);
+}
+
+.translate:hover {
+  /* одновременное перемещение по осям X и Y */
+  transform: translate(50px, 50px);
+}
+
+.scaleX:hover {
+  /* зеркальное отражение по горизонтали */
+  transform: scaleX(-1);
+}
+
+.scaleY:hover {
+  /* зеркальное отражение по вертикали */
+  transform: scaleY(-1);
+}
+
+.scaleX15:hover {
+  /* увеличение масштаба в 1,5 раза */
+  transform: scaleX(1.5);
+}
+
+.scale:hover {
+  /* увеличение масштаба по горизонтали в 1,5 раза, по вертикали - уменьшение в 2 раза */
+  transform: scale(1.5, .5);
+}
+
+.rotate:hover { 
+  /* поворот (поворачивается вместе с системой координат) */
+  transform: rotate(360deg);
+}
+
+.skewX:hover {
+  /* наклон по горизонтали влево */
+  transform: skewX(45deg);
+}
+
+.skewY:hover {
+  /* наклон по вертикали вверх */
+  transform: skewY(-45deg);
+}
+
+.skew:hover {
+  /* наклон по осям X и Y */
+  transform: skew(-20deg, 20deg);
+}
+
+.matrix:hover {
+  /* матрица преобразований: масштаб по горизонтали, без наклона по вертикали, наклон по 
+  горизонтали, масштаб по вертикали, смещение по горизонтали, без смещения по вертикали */
+  transform: matrix(1.5, 0, .5, 1.2, 50, 0);
+}

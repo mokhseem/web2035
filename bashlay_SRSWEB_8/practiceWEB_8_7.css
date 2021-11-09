@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@keyframes rotate {
+  100% { transform: rotate(360deg); } /* ключевой кадр анимации с поворотом на 360 градусов */
+}
+
+.wrap {
+  width: 200px;
+  height: 150px;
+  outline: 1px solid #000;
+  display: inline-block;
+  margin: 35px 50px;
+}
+
+.wrap > div {
+  width: 200px;
+  height: 150px;
+  background: rgba(144, 235, 242, .5);
+  display: inline-block;
+  position: relative;
+  z-index: 2; /* перекрытие блоков — выводит вращающийся блок на передний план */
+  animation: rotate 6s linear infinite; /* зацикленная 6-секундная анимация с линейной скоростью */
+}
+
+.wrap > div > span {
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  text-align: center;
+}
+
+.element-1 {
+  /* точка отсчета системы координат для 2D-трансформаций */
+  transform-origin: 50% 50%;
+}
+
+.element-2 {
+  transform-origin: top left;
+}
+
+.element-3 {
+  transform-origin: 100% 0%;
+}
+
+.element-4 {
+  transform-origin: 50px 50px;
+}

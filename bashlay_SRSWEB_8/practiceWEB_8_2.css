@@ -1,0 +1,38 @@
+body {
+  background-color: #cecece;
+  padding: 32px;
+}
+
+button {
+  margin: 25px 15px;
+  border: none;
+  border-radius: 5px;
+  border: 1px solid lime;
+  padding: 15px 35px;
+}
+
+button:hover {
+  outline: 1px solid white;
+  outline-offset: -2px;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #2563E9;
+  transition: 1s; /* длительность перехода в секундах */
+}
+
+.button1:hover {
+  background-color: #4478E9; /* цвет при наведении курсора */
+}
+
+.button2 {
+  background-color: #2563E9;
+  transition: 1s;
+  transition-property: background; /* переход применяется только к фону кнопки */
+}
+
+.button2:hover {
+  background-color: #E95AD1;
+  outline: none; /* без рамки при наведении курсора */
+}
