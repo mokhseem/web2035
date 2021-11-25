@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Задание 3.4. Возвращаемое значение функции</title>
+    <style>
+      h1 {
+        color: #F00;
+        font-size: 18px;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="newW"></h1>
+    <h3 id="date">11 января 2011 года</h3>
+    <p><span>Введите старую зарплату:</span><br>
+      <input type="text" name="old" id="oldW"></p>
+    <p><span>Введите коэффициент повышения зарплаты:</span><br>
+      <input type="text" name="coefficient" id="coefficientW"></p>
+    <input type="submit" onclick="Wages()" value="Рассчитать">
+    <script>
+      function multiplication(a, b) {
+        return a * b;
+      }
+      
+      function Wages() {
+        let oldWages = parseInt(document.getElementById("oldW").value, 10);
+        let coefficientWages = parseInt(document.getElementById("coefficientW").value, 10);
+        let newWages = multiplication(oldWages, coefficientWages);
+        let date = document.getElementById("date").innerHTML;
+        document.getElementById("newW").innerHTML = "Ваша новая зарплата: " + newWages + " ₽ " + date;
+      }
+    </script>
+  </body>
+</html>
