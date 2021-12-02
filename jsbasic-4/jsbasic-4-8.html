@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Задание 4.8</title>
+  </head>
+  <body>
+    <script>
+      {
+        "use strict";
+
+        let city = {name: 'ГородN', population: '10 млн'};
+        city['getName'] = function () { return this.name; };
+        city['printProperties'] = function () {
+          let result = '';
+          for (item in this) {
+            if ((typeof this[item]) !== 'function') {
+              result += item + '=' + this[item] + '/';
+            }
+          }
+          return result;
+        }
+      }
+    </script>
+  </body>
+</html>

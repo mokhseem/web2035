@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Задание 4.9</title>
+  </head>
+  <body>
+    <script>
+      {
+        "use strict";
+
+        let myArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
+        let getEvent = (arr) => {
+          let evens = [];
+          arr.forEach(i => {
+            if (i % 2 == 0) {
+              evens.push(i);
+            }
+          });
+          return evens;
+        }
+        console.log(getEvent(myArr));
+      }
+    </script>
+  </body>
+</html>

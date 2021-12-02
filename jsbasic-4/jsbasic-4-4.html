@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Задание 4.4. Сортировка массива</title>
+  </head>
+  <body>
+    <script>
+      {
+        "use strict";
+
+        let arr = ['Книги', 'Фильмы', 'Видео', 'Контакты', 'Поисковик', 1, 5, 3, 2];
+
+        sortAndJoin = (unsortedArr) => {
+          let tmpArr = [];
+          for (let i = 0; i < unsortedArr.length; i++) {
+            if (unsortedArr[i] != undefined) {
+              tmpArr.push(unsortedArr[i]);
+            }
+          }
+          tmpArr.sort();
+          return tmpArr.join(' | ');
+        }
+        document.write(sortAndJoin(arr));
+      }
+    </script>
+  </body>
+</html>

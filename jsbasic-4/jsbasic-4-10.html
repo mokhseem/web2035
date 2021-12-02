@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Задание 4.10</title>
+  </head>
+  <body>
+    <script>
+      {
+        "use strict";
+
+        let person = {
+          name: '', surname: '',
+          setName: function (newName) {
+            this.name = newName;
+          },
+          setSurname: function (newSurname) {
+            this.surname = newSurname;
+          },
+          getFullName: function () {
+            return (new String).concat(this.name + ' ' + this.surname);
+          }
+        }
+        console.log('Станислав', 'Сивинский');
+      }
+    </script>
+  </body>
+</html>
