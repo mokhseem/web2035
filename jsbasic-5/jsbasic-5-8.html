@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 5.8</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+      body {
+        margin-top: 2em;
+        font: 3em 'Press Start 2P', cursive;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      {
+        "use strict";
+
+        function getDateProperties(milliseconds) {
+          let date = new Date(milliseconds);
+          let result = {};
+
+          result['day'] = date.getDate();
+          result['month'] = date.getMonth();
+          result['year'] = date.getFullYear();
+          result['hour'] = date.getHours();
+          result['minutes'] = date.getMinutes();
+          result['seconds'] = date.getSeconds();
+
+          return result;
+        }
+
+        function getNameOfMonth(month) {
+          let cyrillicMonth = '';
+          switch (month) {
+            case 0:
+              cyrillicMonth = 'Январь';
+              break;
+            case 1:
+              cyrillicMonth = 'Февраль';
+              break;
+            case 2:
+              cyrillicMonth = 'Март';
+              break;
+            case 3:
+              cyrillicMonth = 'Апрель';
+              break;
+            case 4:
+              cyrillicMonth = 'Май';
+              break;
+            case 5:
+              cyrillicMonth = 'Июнь';
+              break;
+            case 6:
+              cyrillicMonth = 'Июль';
+              break;
+            case 7:
+              cyrillicMonth = 'Август';
+              break;
+            case 8:
+              cyrillicMonth = 'Сентябрь';
+              break;
+            case 9:
+              cyrillicMonth = 'Октябрь';
+              break;
+            case 10:
+              cyrillicMonth = 'Ноябрь';
+              break;
+            case 11:
+              cyrillicMonth = 'Декабрь';
+              break;
+          }
+          return cyrillicMonth;
+        }
+
+        function printPrettyDate(neededDate) {
+          let date = getDateProperties(neededDate);
+          let str = '';
+          str = `${date.day} ${getNameOfMonth(date.month)} ${date.year}, `
+          str = str + `${date.hour}:${date.minutes}:${date.seconds}`
+          return str;
+        }
+
+        document.write(printPrettyDate(1628440235430));
+      }
+    </script>
+  </body>
+</html>

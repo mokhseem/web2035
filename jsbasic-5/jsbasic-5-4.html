@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 5.4</title>
+    <style>
+      .myDiv {
+        font-size: 5em;
+        text-align: center;
+        color: white;
+      }
+
+      p {
+        padding-left: 1.5em;
+        font-size: 1.5em;
+        font-family: monospace;
+        text-transform: uppercase;
+      }
+    </style>
+    <script>
+      {
+        "use strict";
+
+        function getStyle(nameStyle) {
+          let myDiv = document.querySelector('.myDiv');
+          document.querySelector('p').innerText = myDiv.style[nameStyle];
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="myDiv" style="background-color: red; height: 100px; font-family: Arial, Helvetica, sans-serif;">
+      Текст в блоке
+    </div>
+    <p></p>
+    <input type="button" value="Получить цвет фона" onclick="getStyle('backgroundColor')"><br>
+    <input type="button" value="Получить высоту фона" onclick="getStyle('height')"><br>
+    <input type="button" value="Получить семейство шрифта" onclick="getStyle('fontFamily')">
+  </body>
+</html>

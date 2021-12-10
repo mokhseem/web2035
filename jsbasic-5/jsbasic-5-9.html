@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 5.9</title>
+    <style>
+      h1 {
+        font-family: Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Округлятор</h1>
+    <div>
+      <input type="text" placeholder="Введите число" value="" id="num">
+      <input type="text" placeholder="Знаков после точки" value="" id="count">
+      <input type="button" value="Округлить" onclick="roundNumber()">
+    </div>
+    <script>
+      {
+        "use strict";
+
+        function roundNumber() {
+          let num = document.querySelector('#num').value,
+              count = document.querySelector('#count').value,
+              roundedNumber = Math.round(num * (10**count))/(10**count);
+          alert(roundedNumber);
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 5.3. Демонстрация метода setInterval()</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+      p {
+        font: 10em 'Orbitron', sans-serif;
+        text-align: center;
+        color: #8b0000;
+      }
+    </style>
+    <script>
+      {
+        "use strict";
+        
+        let counter = 10;
+        let countdown = () => {
+          document.getElementById('cont').innerHTML = counter--;
+          if (counter < 0) {
+            clearTimeout(interval_id);
+            document.getElementById('cont').innerHTML = 'B00M!';
+          }
+        }
+
+        let interval_id = setInterval(countdown, 1000);
+      }
+    </script>
+  </head>
+  <body>
+    <p id='cont'></p>
+  </body>
+</html>
