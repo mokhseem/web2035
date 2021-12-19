@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 7.3</title>
+  </head>
+  <body>
+    <script>
+      {
+        'use strict';
+
+        let someCookies = [
+          { name: 'login', value: 'stanislav' },
+          { name: 'password', value: 'pass' },
+          { name: 'domain', value: 'localhost'}
+        ];
+
+        for (let i = 0; i < someCookies.length; i++) {
+          document.cookie = encodeURIComponent(someCookies[i].name) + '=' + encodeURIComponent(someCookies[i].value);
+        };
+
+        console.log(document.cookie); //откуда "undefined=undefined"?
+
+        var getCookies = function () {
+          let result = [];
+          let cookies = document.cookie.split('; ');
+          console.log(cookies);
+          for (let i = 0; i < cookies.length; i++) {
+            let delimiter = cookies[i].split('=');
+            result.push({ name: delimiter[0], value: delimiter[1] });
+          };
+          return result;
+        };
+      }
+    </script>
+  </body>
+</html>
