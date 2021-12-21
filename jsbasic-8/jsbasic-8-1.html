@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 8.1. Событие onBlur</title>
+    <script>
+      {
+        'use strict';
+
+        var validateEmail = function (email) {
+          let location = email.indexOf('@');
+          let domain = email.substring(location + 1, email.length);
+          let domainList = ['mail.ru', 'gmail.com', 'mail.kz']
+          let domainCheck = false;
+          for (let i = 0; i < domainList.length; i++) {
+            if (domainList[i] === domain) {
+              domainCheck = true;
+            }
+          }
+          if (location > -1 && domainCheck !== false) {
+            return true;
+          } else {            
+            return false;
+          }
+        }
+
+        var checkInputEmail = function (EmailAddress) {
+          if (validateEmail(EmailAddress) !== true) {
+            alert('Введите Email! Формат: имя_ящика@платформа')
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form action="http://www.ya.ru" method="post">
+      <label>Имя: <br><input type="text" name="Fname"></label><br>
+      <label>Фамилия: <br><input type="text" name="Lname"></label><br>
+      <label>Email: <br><input type="text" name="Email" onblur="checkInputEmail(this.value)"></label><br>
+      <input type="submit" name="Submit" value="Submit">
+      <input type="reset" name="Reset" value="Reset">
+    </form>
+  </body>
+</html>

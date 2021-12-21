@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Залание 8.3. Динамическое изменение значений списка</title>
+    <script>
+      {
+        'use strict';
+        var buildOptions = function (objData, root) {
+          for (key in objData) {
+            var option = document.createElement('option');
+            option.value = objData[key].value;
+            option.innerText = objData[key].name;
+            root.appendChild(option);
+          }
+        }
+
+        var ResetOptionList = function (ElementValue) {
+          let cars = document.forms.cars;
+          let listCars = {
+            moto: {
+              0: {
+                name: 'Ural',
+                value: 1
+              },
+              1: {
+                name: 'Planeta',
+                value: 2
+              },
+              2: {
+                name: 'Voskhod',
+                value: 3
+              },
+              3: {
+                name: 'Minsk',
+                value: 4
+              }
+            },
+            cars: {
+              0: {
+                name: 'Moskvitch',
+                value: 1
+              },
+              1: {
+                name: 'Volga',
+                value: 2
+              },
+              2: {
+                name: 'Lada',
+                value: 3
+              }
+            }
+          }
+          if (ElementValue == 1) {
+            cars.OptionList.innerHTML = '';
+            buildOptions(listCars.moto, cars.OptionList);
+          }
+          if (ElementValue == 2) {
+            cars.OptionList.innerHTML = '';
+            buildOptions(listCars.cars, cars.OptionList);
+          }
+        }
+      }
+    </script>
+    <style>
+      .typeOfVehicles label {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <form name="cars" action="http://www.jimkeogh.com" method="post">
+      <select name="OptionList" size="5">
+        <option value="1">Ural</option>
+        <option value="2">Planeta</option>
+        <option value="3">Voskhod</option>
+        <option value="4">Minsk</option>
+      </select>
+
+      <div class="typeOfVehicles">
+        <label><input type="radio" name="vehicles" checked="true" value="1" onclick="ResetOptionList(this.value);">Motorcycles</label>
+        <label><input type="radio" name="vehicles" value="2" onclick="ResetOptionList(this.value);">Cars</label>
+      </div>
+      <input type="submit" name="Submit" value="Submit">
+      <input type="reset" name="Reset" value="Reset">
+    </form>
+  </body>
+</html>

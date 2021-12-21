@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 8.4. Изменение оформления формы</title>
+    <style>
+      form {
+          font-size: 18px;
+      }
+      input {
+          font-size: 18px;
+      }
+    </style>
+    <script>
+      {
+        'use strict';
+        var validateEmail = function (email) {
+        let Location = email.indexOf('@')
+          if (Location == -1) {
+            return false;
+          }
+          return true;
+        }
+
+        var checkInputEmail = function (EmailAddress) {
+          let checkMail = validateEmail(EmailAddress);
+          if (checkMail == false) {
+            let emailCheck = document.querySelector('input[name="Email"]');
+            emailCheck.style.color = 'red';
+            emailCheck.style.fontSize = '18px';
+            emailCheck.style.outline = '1px solid red';
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form action="http://www.ya.ru" method="post">
+      <label>Имя: <br><input type="text" name="Fname"></label><br>
+      <label>Фамилия: <br><input type="text" name="Lname"></label><br>
+      <label>Email: <br><input type="text" name="Email" onblur="checkInputEmail(this.value)"></label><br>
+      <p class="checkEmail"></p>
+      <input name="Submit" value="Submit" type="submit"/>
+      <input name="Reset" value="Reset" type="reset"/>
+    </form>
+  </body>
+</html>

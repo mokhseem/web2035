@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 8.2. Доступ к атрибутам объектов</title>
+  </head>
+  <body>
+    <form action="http://www..com" method="post" name="order">
+      <label>Имя: <br><input type="text" name="Fname"></label><br>
+      <label>Фамилия: <br><input type="text" name="Lname"></label><br>
+      <label>Email: <br><input type="text" name="Email"></label><br>
+      <button id="sendForm">Отправить</button>
+    </form>
+    <p class="valueOfEmail"></p>
+    <script>
+      {
+        'use strict';
+
+        var display = function (evt) {
+          evt.preventDefault();
+
+          document.querySelector('.valueOfEmail').innerText = 'e-mail: ' + document.forms.order[2].value;
+        }
+
+        document.querySelector('#sendForm').addEventListener('click', display);
+      }
+    </script>
+  </body>
+</html>
