@@ -1,0 +1,32 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16em;
+  height: 4.5em;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #ba4257;
+  border-radius: 3em;
+}
+
+.button--big {
+  width: 33.5em;
+  height: 9.5em;
+  border-radius: 2em;
+}
+
+.button__text {
+  font: 25px "HelveticaNeueCyr-Medium", sans-serif;
+}
+
+.button__text--pb {
+  padding-bottom: 0.2em;
+}
+
+.button__text--big-btn {
+  font: 30px "HelveticaNeueCyr-Medium", sans-serif;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+}

@@ -1,0 +1,40 @@
+footer {
+  height: 112px;
+  background-color: #080742;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 1260px;
+  margin: 0 auto;
+  padding-top: 3.3em;
+}
+
+.footer__email {
+  flex-grow: 0.25;
+}
+
+.footer__socials {
+  padding: 0 1em 0 1.8em;
+}
+
+.footer__link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.socials {
+  display: flex;
+  align-self: flex-end;
+  gap: 20px;
+}
+
+.socials__img {
+  height: 36px;
+  width: 36px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  fill: #ba4257;
+}

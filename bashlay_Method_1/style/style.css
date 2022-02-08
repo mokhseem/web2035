@@ -1,0 +1,28 @@
+@import url("text.css");
+@import url("header.css");
+@import url("button.css");
+@import url("promo.css");
+@import url("about.css");
+@import url("course.css");
+@import url("footer.css");
+
+@font-face {
+  font-family: "HelveticaNeueCyr-Medium";
+  src: url("../fonts/helveticaneuecyr-medium.ttf");
+}
+
+@font-face {
+  font-family: "HelveticaNeueCyr-Light";
+  src: url("../fonts/helveticaneuecyr-light.ttf");
+}
+
+@font-face {
+  font-family: "HelveticaNeueCyr-Thin";
+  src: url("../fonts/helveticaneuecyr-thin.ttf");
+}
+
+body, html {
+  width: 1920px;
+  margin: 0;
+  color: #ffffff;
+}

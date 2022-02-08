@@ -1,0 +1,29 @@
+.block__about {
+  height: 685px;
+  background-color: #040440;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6.5em;
+  padding-top: 6.1em;
+  margin-right: 7.4em;
+}
+
+.about__img {
+  padding-top: 5px;
+}
+
+.about__content {
+  width: 825px;
+}
+
+.about__title {
+  padding-bottom: 0.8em;
+}
+
+.about__text {
+  padding: 1.1em 0 0.1em;
+}

@@ -1,0 +1,35 @@
+.block__promo {
+  height: 890px; 
+}
+
+.block__promo--bg-img {
+  background: #130b5b url("../img/background.png") no-repeat 0 96%;
+}
+
+.promo {
+  width: 670px;
+  padding: 12.6em 22.1em 0;
+}
+
+.promo__title {
+  padding: 1.05em 0 0.85em;
+}
+
+.promo__button {
+  margin: 5.5em 0 3.6em;
+}
+
+.promo__showcase {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  list-style: none;
+}
+
+.promo--ml {
+  margin-left: 4px;
+}
+
+.showcase__text {
+  padding-top: 0.6em;
+}

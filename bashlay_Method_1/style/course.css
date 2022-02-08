@@ -1,0 +1,44 @@
+.block__course {
+  height: 750px;
+  padding-top: 4.6em;
+  background-color: #130b5b;
+}
+
+.course {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1205px;
+  margin: 0 auto;
+}
+
+.course__item:not(:first-child) {
+  flex: 1;
+}
+
+.course__item:nth-child(1) {
+  width: 100%;
+}
+
+.course__item:nth-child(2) {
+  flex-grow: 2;
+}
+
+.course__item {
+  padding-bottom: 3em;
+}
+
+.course__title {
+  padding-bottom: 0.8em;
+}
+
+.course__text {
+  padding: 1.1em 0 0.1em;
+}
+
+.course__text--pt {
+  padding-top: 0.25em;
+}
+
+.course__button {
+  margin: 0 1.5em;
+}
