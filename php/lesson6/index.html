@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Народное голосование</title>
+  </head>
+  <body>
+    <!-- используя встроенный веб-сервер командой php -S localhost:8080 -->
+    <form action="http://localhost:8080/vote.php" method="get">
+      <p>Кто является президентом России?</p>
+      <input type="radio" name="vote" value="Буш">Буш<br>
+      <input type="radio" name="vote" value="Путин" checked>Путин<br>
+      <input type="radio" name="vote" value="Медведев">Медведев<br>
+      <p>Сколько дней в високосном году?</p>
+      <input type="radio" name="leap" value="365">365<br>
+      <input type="radio" name="leap" value="366">366<br>
+      <input type="radio" name="leap" value="368">368<br><br>
+      <button type="submit">Голосовать</button>
+    </form>
+  </body>
+</html>
